@@ -54,3 +54,19 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     if hire_date == "" and return_date == "":
         return False, "Both dates are required"
     
+    try:
+        hired_date = datetime.strptime(return_date, DATE_FORMAT)
+        returned_date = datetime.strptime(hire_date, DATE_FORMAT)
+    except TypeError:
+        return False, "Dates must be in DD/MM/YYYY format"
+
+    if returned_date > hired_date:
+        return False, "Return date must be after hire date"
+
+    boxes = generate_raffle()
+    raffle = calculate_boxes(quantity)
+
+    record = [name, receipt, item, quantity, hire_date, return_date, raffle, boxes]
+    return True, record
+
+
