@@ -165,3 +165,4 @@ entry_return_date.place(x=230, y=290)
 # Buttons for main program actions
 tk.Button(window, text="Append Details", font=("Arial", 14), width=15, command=append_details).place(x=540, y=35)
 tk.Button(window, text="Print Details", font=("Arial", 14), width=15, command=print_details).place(x=760, y=35)
+tk.Button(window, text="Quit", font=("Arial", 14), width=12, command=window.quit).place(x=960, y=35)
