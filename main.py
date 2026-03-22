@@ -183,3 +183,6 @@ tk.Label(window, text="Number Hired", font=("Arial", 16, "bold"), bg="#d9edf7").
 
 # Listbox used to display the records
 listbox = tk.Listbox(window, font=("Courier New", 14), width=110, height=6)
+listbox.place(x=40, y=400)
+
+window.mainloop()
