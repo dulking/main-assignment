@@ -13,5 +13,11 @@ DATE_FORMAT = "%m/%d/%Y"
 hire_list = {}
 raffle_list = []
 
+# Calculates how many boxes are needed
+# Each box holds 25 items
+
+def calculate_boxes(quantity):
+    return math.floor(quantity / BOX_SIZE)
+
 
 
