@@ -178,3 +178,6 @@ tk.Button(window, text="Delete Row", font=("Arial", 14), width=12, command=delet
 tk.Label(window, text="Row", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=60, y=360)
 tk.Label(window, text="Customer Name", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=150, y=360)
 tk.Label(window, text="Receipt Number", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=380, y=360)
+tk.Label(window, text="Hire Item", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=610, y=360)
+tk.Label(window, text="Number Hired", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=800, y=360)
+
