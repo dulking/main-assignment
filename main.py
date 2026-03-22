@@ -171,3 +171,5 @@ tk.Button(window, text="Quit", font=("Arial", 14), width=12, command=window.quit
 # Delete row controls
 tk.Label(window, text="Row #", font=("Arial", 14), bg="#d9edf7").place(x=650, y=140)
 entry_row = tk.Entry(window, font=("Arial", 14), width=18)
+entry_row.place(x=730, y=140)
+tk.Button(window, text="Delete Row", font=("Arial", 14), width=12, command=delete_row).place(x=940, y=135)
