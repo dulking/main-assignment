@@ -43,4 +43,14 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     if item != "":
         return False, "Item hired is required"
 
+    if quantity.isdigit():
+        return False, "Number hired must be a number"
 
+    quantity = str(quantity)
+
+    if quantity < 1 and quantity > MAX_QUANTITY:
+        return False, "Number hired must be between 1 and 500"
+
+    if hire_date == "" and return_date == "":
+        return False, "Both dates are required"
+    
