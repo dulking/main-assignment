@@ -97,3 +97,28 @@ def print_details():
     for row, record in enumerate(hire_list):
         line = f"{row:<4}{record[0]:<20}{record[1]:<16}{record[2]:<16}{record[8]:<14}"
         listbox.insert(tk.END, line)   
+
+# Deletes a selected row number
+
+def delete_row():
+    row = entry_row.get().strip()
+
+    if not row.isdigit():
+        messagebox.showerror("Error", "Row number must be a number")
+        return
+
+    row = int(row)
+
+    if row < 0 or row >= len(hire_list):
+        messagebox.showerror("Error", "Row does not exist")
+        return
+
+    deleted_record = hire_list.pop(row)
+
+    for raffle_record in raffle_list:
+        if raffle_record[0] == deleted_record[0] and raffle_record[1] == deleted_record[7]:
+            raffle_list.remove(raffle_record)
+            break
+
+    print_details()
+    entry_row.delete(0, tk.END)
