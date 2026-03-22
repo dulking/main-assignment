@@ -146,3 +146,12 @@ tk.Label(window, text="Item Hired", font=("Arial", 14), bg="#d9edf7").place(x=60
 tk.Label(window, text="Number Hired", font=("Arial", 14), bg="#d9edf7").place(x=35, y=190)
 tk.Label(window, text="Hire Date", font=("Arial", 14), bg="#d9edf7").place(x=75, y=240)
 tk.Label(window, text="Return Date", font=("Arial", 14), bg="#d9edf7").place(x=45, y=290)
+
+# Entry boxes for user input
+entry_name = tk.Entry(window, font=("Arial", 14), width=20)
+entry_receipt = tk.Entry(window, font=("Arial", 14), width=20)
+entry_item = tk.Entry(window, font=("Arial", 14), width=20)
+entry_quantity = tk.Entry(window, font=("Arial", 14), width=20)
+entry_hire_date = tk.Entry(window, font=("Arial", 14), width=20)
+entry_return_date = tk.Entry(window, font=("Arial", 14), width=20)
+
