@@ -136,3 +136,5 @@ def clear_fields():
 # Creates the main window
 window = tk.Tk()
 window.title("Party Hire System")
+window.geometry("1100x500")
+window.configure(bg="#d9edf7")
