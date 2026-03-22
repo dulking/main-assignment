@@ -181,3 +181,5 @@ tk.Label(window, text="Receipt Number", font=("Arial", 16, "bold"), bg="#d9edf7"
 tk.Label(window, text="Hire Item", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=610, y=360)
 tk.Label(window, text="Number Hired", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=800, y=360)
 
+# Listbox used to display the records
+listbox = tk.Listbox(window, font=("Courier New", 14), width=110, height=6)
