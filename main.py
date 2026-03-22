@@ -173,3 +173,8 @@ tk.Label(window, text="Row #", font=("Arial", 14), bg="#d9edf7").place(x=650, y=
 entry_row = tk.Entry(window, font=("Arial", 14), width=18)
 entry_row.place(x=730, y=140)
 tk.Button(window, text="Delete Row", font=("Arial", 14), width=12, command=delete_row).place(x=940, y=135)
+
+# Table headings
+tk.Label(window, text="Row", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=60, y=360)
+tk.Label(window, text="Customer Name", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=150, y=360)
+tk.Label(window, text="Receipt Number", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=380, y=360)
