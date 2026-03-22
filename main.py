@@ -69,4 +69,24 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     record = [name, receipt, item, quantity, hire_date, return_date, raffle, boxes]
     return True, record
 
+    # Adds a new hire record to the lists
 
+def append_details():
+    name = entry_name.get
+    receipt = entry_receipt.get()
+    item = entry_item.get()
+    quantity = entry_quantity.get()
+    hire_date = entry_hire_date.get()
+    return_date = entry_return_date.get()
+
+    valid, result = validate_input(name, receipt, item, quantity, hire_date, return_date)
+
+    if not valid:
+        messagebox.showinfo("Error", result)
+
+    hire_list.append(result)
+    raffle_list.append(result[0], result[7])
+
+    print_details()
+
+    
