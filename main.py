@@ -122,3 +122,13 @@ def delete_row():
 
     print_details()
     entry_row.delete(0, tk.END)
+
+# Clears entry boxes after data is added
+
+def clear_fields():
+    entry_name.delete(0, tk.END)
+    entry_receipt.delete(0, tk.END)
+    entry_item.delete(0, tk.END)
+    entry_quantity.delete(0, tk.END)
+    entry_hire_date.delete(0, tk.END)
+    entry_return_date.delete(0, tk.END)
