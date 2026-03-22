@@ -132,3 +132,7 @@ def clear_fields():
     entry_quantity.delete(0, tk.END)
     entry_hire_date.delete(0, tk.END)
     entry_return_date.delete(0, tk.END)
+
+# Creates the main window
+window = tk.Tk()
+window.title("Party Hire System")
