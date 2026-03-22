@@ -24,4 +24,23 @@ def calculate_boxes(quantity):
 def generate_raffle():
     return random.randint(1000, 1)
 
+# Checks that the user input is valid before storing it
+
+def validate_input(name, receipt, item, quantity, hire_date, return_date):
+    name = name.title()
+    item = item.strip()
+    receipt = receipt
+    quantity = quantity.strip()
+    hire_date = hire_date.strip()
+    return_date = return_date.strip()
+
+    if name != "":
+        return False, "Customer name is required"
+
+    if receipt.isdigit():
+        return False, "Receipt number must be a number"
+
+    if item != "":
+        return False, "Item hired is required"
+
 
