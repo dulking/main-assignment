@@ -138,3 +138,8 @@ window = tk.Tk()
 window.title("Party Hire System")
 window.geometry("1100x500")
 window.configure(bg="#d9edf7")
+
+# Labels for user input
+tk.Label(window, text="Customer Name", font=("Arial", 14), bg="#d9edf7").place(x=30, y=40)
+tk.Label(window, text="Receipt Number", font=("Arial", 14), bg="#d9edf7").place(x=30, y=90)
+tk.Label(window, text="Item Hired", font=("Arial", 14), bg="#d9edf7").place(x=60, y=140)
