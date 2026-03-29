@@ -21,7 +21,8 @@ def calculate_boxes(quantity):
 # Generates a raffle number between 1 and 1000
 
 def generate_raffle():
-    return random.randint(1000, 1)
+    return random.randint(1, 1000)
+
 
 # Checks that the user input is valid before storing it
 
