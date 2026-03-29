@@ -93,7 +93,7 @@ def append_details():
  # Displays all stored hire records
 
 def print_details():
-    listbox.delete(1, tk.END)
+    listbox.delete(0, tk.END)
 
     for row, record in enumerate(hire_list):
         line = f"{row:<4}{record[0]:<20}{record[1]:<16}{record[2]:<16}{record[8]:<14}"
