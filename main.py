@@ -88,6 +88,7 @@ def append_details():
     raffle_list.append([result[0], result[7]])
 
     print_details()
+    clear_fields()
 
  # Displays all stored hire records
 
