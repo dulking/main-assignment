@@ -17,8 +17,7 @@ raffle_list = []
 # Each box holds 25 items
 
 def calculate_boxes(quantity):
-    return math.floor(quantity / BOX_SIZE)
-
+   return math.ceil(quantity / BOX_SIZE)
 # Generates a raffle number between 1 and 1000
 
 def generate_raffle():
