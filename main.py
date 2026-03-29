@@ -48,7 +48,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
 
     quantity = int(quantity)
 
-    if quantity < 1 and quantity > MAX_QUANTITY:
+    if quantity < 1 or quantity > MAX_QUANTITY:
         return False, "Number hired must be between 1 and 500"
 
     if hire_date == "" and return_date == "":
