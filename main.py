@@ -60,7 +60,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     except ValueError:
         return False, "Dates must be in DD/MM/YYYY format"
 
-    if returned_date > hired_date:
+    if returned_date < hired_date:
         return False, "Return date must be after hire date"
 
     boxes = generate_raffle()
