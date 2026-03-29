@@ -29,7 +29,7 @@ def generate_raffle():
 def validate_input(name, receipt, item, quantity, hire_date, return_date):
     name = name.strip().title()
     item = item.strip().title()
-    receipt = receipt
+    receipt = receipt.strip()
     quantity = quantity.strip()
     hire_date = hire_date.strip()
     return_date = return_date.strip()
