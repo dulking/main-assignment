@@ -46,7 +46,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     if not quantity.isdigit():  
         return False, "Number hired must be a number"
 
-    quantity = str(quantity)
+    quantity = int(quantity)
 
     if quantity < 1 and quantity > MAX_QUANTITY:
         return False, "Number hired must be between 1 and 500"
