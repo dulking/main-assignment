@@ -85,7 +85,7 @@ def append_details():
      messagebox.showerror("Error", result)
     return
     hire_list.append(result)
-    raffle_list.append(result[0], result[7])
+    raffle_list.append([result[0], result[7]])
 
     print_details()
 
