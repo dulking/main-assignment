@@ -10,7 +10,7 @@ BOX_SIZE = 25
 DATE_FORMAT = "%d/%m/%Y"
 
 # Lists used to store program data
-hire_list = {}
+hire_list = []
 raffle_list = []
 
 # Calculates how many boxes are needed
