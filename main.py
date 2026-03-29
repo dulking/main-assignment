@@ -40,7 +40,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     if not receipt.isdigit():
         return False, "Receipt number must be a number"
 
-    if item != "":
+    if item == "":
         return False, "Item hired is required"
 
     if quantity.isdigit():
