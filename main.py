@@ -66,7 +66,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     boxes = calculate_boxes(quantity)
     raffle = generate_raffle()
 
-    record = [name, receipt, item, quantity, hire_date, return_date, raffle, boxes]
+    record = [name, receipt, item, quantity, hire_date, return_date, boxes, raffle]
     return True, record
 
     # Adds a new hire record to the lists
