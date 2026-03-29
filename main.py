@@ -34,7 +34,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     hire_date = hire_date.strip()
     return_date = return_date.strip()
 
-    if name != "":
+    if name == "":
         return False, "Customer name is required"
 
     if receipt.isdigit():
