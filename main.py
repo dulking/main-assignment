@@ -82,8 +82,7 @@ def append_details():
     valid, result = validate_input(name, receipt, item, quantity, hire_date, return_date)
 
     if not valid:
-        messagebox.showinfo("Error", result)
-
+        messagebox.showerror("Error", result)
     hire_list.append(result)
     raffle_list.append(result[0], result[7])
 
