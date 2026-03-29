@@ -63,7 +63,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     if returned_date < hired_date:
         return False, "Return date must be after hire date"
 
-    boxes = generate_raffle()
+    boxes = calculate_boxes(quantity)
     raffle = calculate_boxes(quantity)
 
     record = [name, receipt, item, quantity, hire_date, return_date, raffle, boxes]
