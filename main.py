@@ -27,7 +27,7 @@ def generate_raffle():
 # Checks that the user input is valid before storing it
 
 def validate_input(name, receipt, item, quantity, hire_date, return_date):
-    name = name.title()
+    name = name.strip().title()
     item = item.strip()
     receipt = receipt
     quantity = quantity.strip()
