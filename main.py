@@ -72,7 +72,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     # Adds a new hire record to the lists
 
 def append_details():
-    name = entry_name.get
+    name = entry_name.get()
     receipt = entry_receipt.get()
     item = entry_item.get()
     quantity = entry_quantity.get()
