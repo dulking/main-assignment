@@ -142,12 +142,12 @@ window.geometry("1100x500")
 window.configure(bg="#d9edf7")
 
 # Labels for user input
-tk.Label(window, text="Customer Name", font=("Arial", 14), bg="#d9edf7").place(x=30, y=40)
-tk.Label(window, text="Receipt Number", font=("Arial", 14), bg="#d9edf7").place(x=30, y=90)
-tk.Label(window, text="Item Hired", font=("Arial", 14), bg="#d9edf7").place(x=60, y=140)
-tk.Label(window, text="Number Hired", font=("Arial", 14), bg="#d9edf7").place(x=35, y=190)
-tk.Label(window, text="Hire Date", font=("Arial", 14), bg="#d9edf7").place(x=75, y=240)
-tk.Label(window, text="Return Date", font=("Arial", 14), bg="#d9edf7").place(x=45, y=290)
+tk.Label(window, text="Customer Name", font=("Arial", 14), bg="#81d2fb").place(x=30, y=40)
+tk.Label(window, text="Receipt Number", font=("Arial", 14), bg="#7bd2fe").place(x=30, y=90)
+tk.Label(window, text="Item Hired", font=("Arial", 14), bg="#82d3fc").place(x=60, y=140)
+tk.Label(window, text="Number Hired", font=("Arial", 14), bg="#74d0fd").place(x=35, y=190)
+tk.Label(window, text="Hire Date", font=("Arial", 14), bg="#71d0ff").place(x=75, y=240)
+tk.Label(window, text="Return Date", font=("Arial", 14), bg="#7fcdf5").place(x=45, y=290)
 
 # Entry boxes for user input
 entry_name = tk.Entry(window, font=("Arial", 14), width=20)
