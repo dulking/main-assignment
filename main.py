@@ -94,9 +94,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     # Check that quantity is within the allowed range (1–500)
     # This ensures negative numbers and numbers above 500 are rejected
     # ----------------------------------------------------------
-    if quantity < 1 or quantity > MAX_QUANTITY:
-     return False, "Number hired must be between 1 and 500"
-
+  
     # Check that quantity is within the allowed range
     if quantity < 1 or quantity > MAX_QUANTITY:
         return False, "Number hired must be between 1 and 500"
@@ -164,24 +162,35 @@ def append_details():
     print_details()
     clear_fields()
 
-# ----------------------------------------------------------
-# Displays all stored hire records
-# This function clears the listbox first, then loops through
-# all records in hire_list and displays selected fields in a
-# neatly spaced format.
-# ----------------------------------------------------------
+
 def print_details():
-    # Clear all old items from the listbox before reprinting
+    # ----------------------------------------------------------
+    # This function displays all stored hire records in aligned columns
+    # It clears the listbox first, then prints a formatted table.
+    # ----------------------------------------------------------
+
+    # Clear previous data so it does not duplicate
     listbox.delete(0, tk.END)
 
-    # Go through each record in hire_list
+    # Define column widths (clean + consistent)
+    row_w = 5
+    name_w = 20
+    receipt_w = 18
+    item_w = 18
+    quantity_w = 10
+
+    # Header row
+    header = f"{'Row':<{row_w}} {'Customer Name':<{name_w}} {'Receipt Number':<{receipt_w}} {'Hire Item':<{item_w}} {'Number Hired':<{quantity_w}}"
+    listbox.insert(tk.END, header)
+
+    # Separator line (matches exact width)
+    total_width = row_w + name_w + receipt_w + item_w + quantity_w + 4
+    listbox.insert(tk.END, "-" * total_width)
+
+    # Print each record
     for row, record in enumerate(hire_list):
-        # Create a formatted line showing row number, name,
-        # receipt number, item hired, and quantity
-        line = f"{row:<4}{record[0]:<20}{record[1]:<16}{record[2]:<16}{record[3]:<14}"
-        
-        # Insert the formatted line into the listbox
-        listbox.insert(tk.END, line)   
+        line = f"{row:<{row_w}} {record[0]:<{name_w}} {record[1]:<{receipt_w}} {record[2]:<{item_w}} {record[3]:<{quantity_w}}"
+        listbox.insert(tk.END, line)
 
 # ----------------------------------------------------------
 # Deletes a selected row number
@@ -301,16 +310,7 @@ entry_row = tk.Entry(window, font=("Arial", 14), width=18)
 entry_row.place(x=730, y=140)
 tk.Button(window, text="Delete Row", font=("Arial", 14), width=12, command=delete_row).place(x=940, y=135)
 
-# ----------------------------------------------------------
-# Table headings
-# These labels act like column headings for the displayed
-# output shown in the listbox below.
-# ----------------------------------------------------------
-tk.Label(window, text="Row", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=60, y=360)
-tk.Label(window, text="Customer Name", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=150, y=360)
-tk.Label(window, text="Receipt Number", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=380, y=360)
-tk.Label(window, text="Hire Item", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=610, y=360)
-tk.Label(window, text="Number Hired", font=("Arial", 16, "bold"), bg="#d9edf7").place(x=800, y=360)
+
 
 # ----------------------------------------------------------
 # Listbox used to display the records
