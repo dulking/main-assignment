@@ -80,12 +80,22 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     if item == "":
         return False, "Item hired is required"
 
-    # Check that quantity is numeric before converting to integer
-    if not quantity.isdigit():  
-        return False, "Number hired must be a number"
-
-    # Convert quantity from text to integer after validation
-    quantity = int(quantity)
+    # ----------------------------------------------------------
+    # Check that quantity is a valid number
+    # Try to convert the input to an integer first
+    # This allows negative numbers (e.g. -1) to be recognised as numbers
+    # If conversion fails (e.g. letters), show an error
+    # ----------------------------------------------------------
+    try:
+      quantity = int(quantity)
+    except ValueError:
+     return False, "Number hired must be a number"
+    # ----------------------------------------------------------
+    # Check that quantity is within the allowed range (1–500)
+    # This ensures negative numbers and numbers above 500 are rejected
+    # ----------------------------------------------------------
+    if quantity < 1 or quantity > MAX_QUANTITY:
+     return False, "Number hired must be between 1 and 500"
 
     # Check that quantity is within the allowed range
     if quantity < 1 or quantity > MAX_QUANTITY:
