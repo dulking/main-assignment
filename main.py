@@ -20,7 +20,7 @@ from datetime import datetime
 # BOX_SIZE is how many items fit into one box.
 # DATE_FORMAT is the required format for entered dates.
 # ----------------------------------------------------------
-
+MAX_QUANTITY = 100
 BOX_SIZE = 25
 DATE_FORMAT = "%d/%m/%Y"
 
@@ -101,7 +101,7 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
    # ----------------------------------------------------------
   
     # Check that quantity is within the allowed range
-    MAX_QUANTITY = 100
+  
     if quantity < 1 or quantity > MAX_QUANTITY:
         return False, "Number hired must be between 1 and 100" 
     
