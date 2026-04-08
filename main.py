@@ -93,14 +93,18 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
       quantity = int(quantity)
     except ValueError:
      return False, "Number hired must be a number"
-    # ----------------------------------------------------------
-    # Check that quantity is within the allowed range (1–500)
-    # This ensures negative numbers and numbers above 500 are rejected
-    # ----------------------------------------------------------
+   # ----------------------------------------------------------
+   # Check that quantity is within the allowed range (1–100)
+   # This ensures that invalid values such as negative numbers,
+   # zero, or numbers greater than 100 are not accepted
+   # Only valid quantities between 1 and 100 are allowed
+   # ----------------------------------------------------------
   
     # Check that quantity is within the allowed range
+    MAX_QUANTITY = 100
     if quantity < 1 or quantity > MAX_QUANTITY:
-        return False, "Number hired must be between 1 and 500"
+        return False, "Number hired must be between 1 and 100" 
+    
 
     # Check that both date fields have been entered
     if hire_date == "" or return_date == "":
