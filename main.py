@@ -71,6 +71,9 @@ def validate_input(name, receipt, item, quantity, hire_date, return_date):
     # Check that customer name has been entered
     if name == "":
         return False, "Customer name is required"
+    # Check that customer name contains letters only
+    if not name.replace(" ", "").isalpha():
+       return False, "Customer name must contain letters only"
 
     # Check that receipt number is numeric
     if not receipt.isdigit():
